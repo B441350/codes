@@ -1,0 +1,27 @@
+class parent:
+	def __init__(self,name,relation):
+		self.name = name
+		self.relation = relation
+	def printname(self):
+		print(self.name)
+
+class parent1:
+	def __init__(self,name,relation):
+		super().__init__(name)
+		self.relation = relation
+	def printrelation(self):
+		print(self.relation)
+
+class child(parent,parent1):
+	def __init__(self,name,relation,age):
+		super().__init__(name,relation)
+		self.age = age
+
+	def printgae(self):
+		print(self.age)
+ob = child("bharthi","sister",23)
+ob.printname()
+ob.printgae()
+ob.printrelation()
+
+
